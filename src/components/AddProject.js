@@ -19,7 +19,7 @@ export const AddProject = ({ shouldShow = false }) => {
       .add({
         projectId,
         name: projectName,
-        userId: 'jlIFXIwyAL3tzHMtzRbw',
+        userId: 'xqVi7GjsFU2UrumzvPNZ',
       })
       .then(() => {
         setProjects([...projects]);
