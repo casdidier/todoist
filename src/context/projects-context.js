@@ -4,6 +4,8 @@ import { useProjects } from '../hooks';
 
 export const ProjectsContext = createContext();
 export const ProjectsProvider = ({ children }) => {
+
+  // retrieve the projects on the cloud db
   const { projects, setProjects } = useProjects();
 
   return (
