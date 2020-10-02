@@ -25,27 +25,28 @@ describe('<Checkbox />', () => {
       expect(queryByTestId('checkbox-action')).toBeTruthy();
     });
 
-    // it('renders the task checkbox and accepts a onClick', () => {
-    //   const { queryByTestId } = render(
-    //     <Checkbox id="1" taskDesc="Finish this tutorial series!" />
-    //   );
-    //   expect(queryByTestId('checkbox-action')).toBeTruthy();
-    //   fireEvent.click(queryByTestId('checkbox-action'));
-    // });
 
-    // it('renders the task checkbox and accepts a onKeyDown', () => {
-    //   const { queryByTestId } = render(
-    //     <Checkbox id="1" taskDesc="Finish this tutorial series!" />
-    //   );
-    //   expect(queryByTestId('checkbox-action')).toBeTruthy();
-    //   fireEvent.keyDown(queryByTestId('checkbox-action'), {
-    //     key: 'a',
-    //     code: 65,
-    //   });
-    //   fireEvent.keyDown(queryByTestId('checkbox-action'), {
-    //     key: 'Enter',
-    //     code: 13,
-    //   });
-    // });
+    it('renders the task checkbox and accepts a onClick', () => {
+      const { queryByTestId } = render(
+        <Checkbox id="1" taskDesc="Finish this tutorial series!" />
+      );
+      expect(queryByTestId('checkbox-action')).toBeTruthy();
+      fireEvent.click(queryByTestId('checkbox-action'));
+    });
+
+    it('renders the task checkbox and accepts a onKeyDown', () => {
+      const { queryByTestId } = render(
+        <Checkbox id="1" taskDesc="Finish this tutorial series!" />
+      );
+      expect(queryByTestId('checkbox-action')).toBeTruthy();
+      fireEvent.keyDown(queryByTestId('checkbox-action'), {
+        key: 'a',
+        code: 65,
+      });
+      fireEvent.keyDown(queryByTestId('checkbox-action'), {
+        key: 'Enter',
+        code: 13,
+      });
+    });
   });
 });
